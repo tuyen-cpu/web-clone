@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
@@ -36,17 +37,104 @@
                     </div>
                     <div class="search-header">
                         <div class="search-header-site">
-                            <div class="select is-link search-header-site__select">
-                                <select>
-                              <option>Select dropdown</option>
-                              <option>With options</option>
-                            </select>
+                            <div class="search-header-site__select">
+                                <div class="search-header-site__selected">All Categories</div>
+                                <!-- <div class="search-header-dropdown">
+                                    <ul class="search-header-list">
+                                        <li class="search-header-item">All Categories</li>
+                                        <li class="search-header-item">Uncategorized</li>
+                                        <li class="search-header-item">Cameras & Camcoders</li>
+                                        <li class="search-header-item">Computer & Networking
+                                            <ul class="search-header-list__list">
+                                                <li class="search-header-list__item">Computer</li>
+                                                <li class="search-header-list__item">Networking</li>
+                                            </ul>
+                                        </li>
+                                        <li class="search-header-item">All Categories</li>
+                                        <li class="search-header-item">All Categories</li>
+                                    </ul>
+                                </div> -->
                             </div>
                             <form action="" class="search-header-form">
-                                <input type="text" class="search-header-form__input">
+                                <input type="text" class="search-header-form__input" placeholder="Search product...">
                                 <button class="btn-primary search-header-form__btn">Search</button>
                             </form>
                         </div>
+                    </div>
+                    <div class="cart-wishlist">
+                        <ul class="cart-wishlist__list">
+                            <li class="cart-wishlist__item">
+                                <a href="" class="cart-wishlist__link">
+                                    <span class="cart-wishlist__quantity">12</span>
+                                    <i class="far fa-heart cart-wishlist__img"></i></a>
+                            </li>
+                            <li class="cart-wishlist__item">
+                                <a href="" class="cart-wishlist__link cart-wishlist__cart">
+                                    <span class="cart-wishlist__quantity">12</span>
+                                    <i class="far fa-shopping-bag cart-wishlist__img"></i>
+                                    <span class="cart-wishlist__price-wrapper"><span>$</span class="cart-wishlist__price">0.00</span>
+                                </a>
+                                <div class="cart-dropdown">
+                                    <div class="cart-dropdown__site">
+                                        <ul class="cart-dropdown-list">
+                                            <li class="cart-dropdown-item">
+                                                <a href="" class="cart-dropdown-item__link">
+                                                    <img src="./assets/img/product-1.jpg" alt="" class="cart-dropdown-item__img">
+                                                </a>
+                                                <div class="cart-dropdown-item__txt">
+                                                    <a class="cart-dropdown-item__desc">Natus erro at congue massa commodo sit Natus erro at congue massa commodo sit </a>
+                                                    <span class="cart-dropdown-item__info">
+                                                        <span class="cart-dropdown-item__quantity">12</span>
+                                                    <span class="cart-dropdown-item__price-wapper">
+                                                        × <span>$</span><span class="cart-dropdown-item__price">85.00</span>
+                                                    </span>
+                                                    </span>
+                                                </div>
+                                                <a class="cart-dropdown-item__remove-link"><i class="fa fa-times-circle cart-dropdown-item__remove-img"></i></a>
+                                            </li>
+                                            <li class="cart-dropdown-item">
+                                                <a href="" class="cart-dropdown-item__link">
+                                                    <img src="./assets/img/product-1.jpg" alt="" class="cart-dropdown-item__img">
+                                                </a>
+                                                <div class="cart-dropdown-item__txt">
+                                                    <a class="cart-dropdown-item__desc">Natus erro at congue massa commodo sit Natus erro at congue massa commodo sit </a>
+                                                    <span class="cart-dropdown-item__info">
+                                                        <span class="cart-dropdown-item__quantity">12</span>
+                                                    <span class="cart-dropdown-item__price-wapper">
+                                                        × <span>$</span><span class="cart-dropdown-item__price">85.00</span>
+                                                    </span>
+                                                    </span>
+                                                </div>
+                                                <a class="cart-dropdown-item__remove-link"><i class="fa fa-times-circle cart-dropdown-item__remove-img"></i></a>
+                                            </li>
+                                            <li class="cart-dropdown-item">
+                                                <a href="" class="cart-dropdown-item__link">
+                                                    <img src="./assets/img/product-1.jpg" alt="" class="cart-dropdown-item__img">
+                                                </a>
+                                                <div class="cart-dropdown-item__txt">
+                                                    <a class="cart-dropdown-item__desc">Natus erro at congue massa commodo sit Natus erro at congue massa commodo sit </a>
+                                                    <span class="cart-dropdown-item__info">
+                                                        <span class="cart-dropdown-item__quantity">12</span>
+                                                    <span class="cart-dropdown-item__price-wapper">
+                                                        × <span>$</span><span class="cart-dropdown-item__price">85.00</span>
+                                                    </span>
+                                                    </span>
+                                                </div>
+                                                <a class="cart-dropdown-item__remove-link"><i class="fa fa-times-circle cart-dropdown-item__remove-img"></i></a>
+                                            </li>
+                                        </ul>
+                                        <div class="cart-dropdown__total">
+                                            <span class="cart-dropdown__total-title">Total:</span>
+                                            <span class="cart-dropdown__total-price"><span>$</span>85.00</span>
+                                        </div>
+                                        <div class="cart-dropdown__list-btn">
+                                            <a href="" class="cart-dropdown__btn">View cart</a>
+                                            <a href="" class="cart-dropdown__btn">Checkout</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
                 </div>
             </div>
