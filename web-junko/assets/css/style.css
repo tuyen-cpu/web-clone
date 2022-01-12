@@ -359,7 +359,6 @@ button {
     display: none;
     top: 100%;
     right: 0;
-    opacity: 0;
     animation-name: topToDown;
     animation-duration: 0.5s;
     overflow: hidden;
@@ -509,10 +508,8 @@ button {
 @keyframes topToDown {
     from {
         height: 0;
-        opacity: 0;
     }
     to {
         height: 450px;
-        opacity: 1;
     }
 }
