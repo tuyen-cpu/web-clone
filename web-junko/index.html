@@ -11,6 +11,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
@@ -178,7 +179,7 @@
                                             <li class="categories-item">
                                                 <a href="" class="categories-item__link">Networking</a>
                                             </li>
-                                            <li class="categories-item categories-item--more"><i class="far fa-plus"></i> More Categories</li>
+                                            <li class="categories-item categories-item--more">&#160;<i class="far fa-plus"></i>More Categories</li>
                                         </ul>
 
                                     </div>
@@ -221,7 +222,92 @@
                 </div>
             </div>
         </header>
+        <section class="banner-home">
+
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img class="banner-home__img" src="./assets/img/banner-1.jpg" alt=""></div>
+                    <div class="swiper-slide"><img class="banner-home__img" src="./assets/img/banner-2.jpg" alt=""></div>
+                    <div class="swiper-slide"><img class="banner-home__img" src="./assets/img/banner-3.jpg" alt=""></div>
+                </div>
+                <div class="container">
+                    <div class="banner-home__info">
+                        <h1 class="banner-home__title-1"></h1>
+                    </div>
+                </div>
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="policy-home">
+            <div class="policy__wrapper">
+                <div class="container">
+                    <div class="columns is-multiline is-mobile is-desktop">
+                        <div class="column is-3-desktop is-6-tablet">
+                            <div class="policy-item is-flex">
+                                <div class="policy-item__img"> <img src="./assets/img/policy1.png" alt=""></div>
+                                <div class="policy-item__txt">
+                                    <h5 class="policy-item__title">Free Delivery</h5>
+                                    <p class="policy-item__desc">For all orders over $99</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3-desktop is-6-tablet">
+                            <div class="policy-item is-flex">
+                                <div class="policy-item__img"> <img src="./assets/img/policy2.png" alt=""></div>
+                                <div class="policy-item__txt">
+                                    <h5 class="policy-item__title">Safe Payment</h5>
+                                    <p class="policy-item__desc">100% secure payment</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3-desktop is-6-tablet">
+                            <div class="policy-item is-flex">
+                                <div class="policy-item__img"> <img src="./assets/img/policy3.png" alt=""></div>
+                                <div class="policy-item__txt">
+                                    <h5 class="policy-item__title">Shop With Confidence</h5>
+                                    <p class="policy-item__desc">If goods have problems</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="column is-3-desktop is-6-tablet">
+                            <div class="policy-item is-flex">
+                                <div class="policy-item__img"> <img src="./assets/img/policy4.png" alt=""></div>
+                                <div class="policy-item__txt">
+                                    <h5 class="policy-item__title">24/7 Help Center</h5>
+                                    <p class="policy-item__desc">Dedicated 24/7 support</p>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
     </div>
+    <script src="./assets/js/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+        });
+    </script>
     <script src="./assets/js/controls.js"></script>
 </body>
 

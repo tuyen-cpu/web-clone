@@ -626,7 +626,8 @@ button {
 
 .categories-item--more i {
     font-size: 1rem;
-    font-weight: 600
+    font-weight: 600;
+    margin-right: 4px;
 }
 
 .categories-item__link {
@@ -790,6 +791,47 @@ button {
 }
 
 
+/* banner section */
+
+.banner-home {
+    height: 500px;
+}
+
+.banner-home__img {
+    user-select: none;
+}
+
+
+/* Policy */
+
+.policy__wrapper {
+    padding: 50px 0;
+}
+
+.policy-item {}
+
+.policy-item__img {
+    padding: 10px 0;
+}
+
+.policy-item__txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin-left: 24px;
+    font-size: 1.4rem;
+}
+
+.policy-item__title {
+    font-weight: 500;
+    color: #323232;
+}
+
+.policy-item__desc {
+    color: #777;
+}
+
+
 /* animation */
 
 @keyframes topToDown {
@@ -799,4 +841,38 @@ button {
     to {
         height: 450px;
     }
+}
+
+
+/* Slider */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #fff;
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+}
+
+.swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
