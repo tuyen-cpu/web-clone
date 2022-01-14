@@ -195,6 +195,7 @@ button {
 }
 
 .search-header-site__selected {
+    user-select: none;
     position: relative;
     padding: 0 20px;
     width: 175px;
@@ -204,9 +205,13 @@ button {
     border-top: 2px solid var(--border-color);
     border-left: 2px solid var(--border-color);
     cursor: pointer;
-    text-align: center;
     font-size: 1.4rem;
     color: #363f4d;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    text-overflow: ellipsis;
+    overflow: hidden;
 }
 
 .search-header-site__selected:hover {
@@ -224,12 +229,16 @@ button {
 }
 
 .search-header-dropdown {
+    z-index: 2;
+    left: 0;
+    top: 100%;
+    background-color: #fff;
     display: none;
     position: absolute;
     border: 1px solid var(--border-color);
 }
 
-.search-header-dropdown .is-show {
+.is-show .search-header-dropdown {
     display: block;
 }
 
@@ -240,22 +249,24 @@ button {
     padding: 15px 20px;
 }
 
-.search-header-item:hover {
-    color: var(--main-color);
-    cursor: pointer;
-}
-
 .search-header-item+.search-header-item {
     margin-top: 15px;
 }
 
-.search-header-item {
+.search-header-item__link {
     color: #999;
     font-size: 1.4rem;
+    display: block;
+}
+
+.search-header-item__link:hover {
+    color: var(--main-color);
+    cursor: pointer;
 }
 
 .search-header-list__list {
     margin-left: 20px;
+    margin-top: 6px;
 }
 
 .search-header-list__item+.search-header-list__item {
@@ -559,7 +570,12 @@ button {
     background: #1953b4;
     height: 100%;
     line-height: 30px;
+    cursor: pointer;
+}
+
+.navbar-header-categories__title {
     padding: 13px 30px;
+    user-select: none;
 }
 
 .navbar-header-categories__title::before {
@@ -569,17 +585,107 @@ button {
     right: 20px;
 }
 
-.navbar-header-categories__dropdown {}
+.is-show~.categories__dropdown {
+    display: block;
+}
 
-.header-categories-list {}
+.categories__dropdown {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    box-shadow: 0px 0px 20px -15px rgba(0, 0, 0, 0.3)
+}
 
-.header-categories-item {}
+.categories__dropdown-site {
+    padding-top: 14px;
+    font-size: 1.4rem;
+    text-transform: none;
+    border: 1px solid var(--border-color);
+}
 
-.navbar-header-categories-item__list {}
+.categories-item:last-child {
+    border-top: 1px solid var(--border-color);
+}
 
-.navbar-header-categories-item__item {}
+.categories-item {
+    color: #222;
+    font-weight: 400;
+    line-height: 2.5rem;
+}
 
-.navbar-header-nav {}
+.categories-item--more {
+    margin: 8px 30px 0;
+    padding: 12px 0;
+    cursor: pointer;
+}
+
+.categories-item--more:hover {
+    color: var(--main-color);
+}
+
+.categories-item--more i {
+    font-size: 1rem;
+    font-weight: 600
+}
+
+.categories-item__link {
+    padding: 7px 30px;
+    color: #222;
+    font-weight: 400;
+    display: block;
+    line-height: 2.5rem;
+    position: relative;
+}
+
+.categories-item.more {
+    position: relative;
+}
+
+.more>.categories-item__link::before {
+    position: absolute;
+    content: '\f054';
+    font-family: "Font Awesome 5 Pro";
+    font-size: 1.1rem;
+    opacity: .7;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+.categories-item__link:hover {
+    color: var(--main-color);
+}
+
+.categories-item:hover .categories-item__list {
+    transform: rotate3d(0, 0, 0, 0deg);
+}
+
+.categories-item__list {
+    position: absolute;
+    left: 100%;
+    top: 0;
+    border: 1px solid var(--border-color);
+    padding: 0 10px;
+    transform-origin: 0% 0%;
+    transform: rotate3d(0, 1, 0, 90deg);
+    transition: transform 0.2s linear;
+}
+
+.categories-item__item--sub {
+    border-bottom: 1px solid var(--border-color);
+}
+
+.categories-item__item--sub .categories-item__link {
+    padding: 12px 10px;
+}
+
+.categories-item__item {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 .navbar-list {
     display: flex;
@@ -641,7 +747,13 @@ button {
 
 /* dropdown nav list */
 
+.navbar-list-item:hover .navbar-list-dropdown {
+    transform: perspective(600px) rotateX(0deg);
+    transition: transform .5s ease;
+}
+
 .navbar-list-dropdown {
+    transform-origin: 0% 0%;
     top: 100%;
     position: absolute;
     background: #fff;
@@ -650,7 +762,8 @@ button {
     color: #333;
     padding: 20px 30px 20px;
     border-radius: 0 0 5px 5px;
-    transform: rotateX(100deg)
+    transform: perspective(600px) rotateX(-90deg);
+    transition: transform .5s ease;
 }
 
 .navbar-list-item__list {}
